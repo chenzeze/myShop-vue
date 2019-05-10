@@ -1,0 +1,90 @@
+@import "../base.css";
+
+.food-container {}
+
+.swiper {
+  height: 200px;
+  width: 100%;
+}
+
+.swiper-box {
+  overflow-x: hidden;
+}
+
+.banner-item {
+  height: 100%;
+  width: 100%;
+}
+
+.banner-item img {
+  height: 100%;
+  width: 100%;
+}
+
+.home-main {
+  width: 100%;
+}
+
+.home-main-header {
+  display: flex;
+  height: 30px;
+  color: #AB956D;
+  background-color: #fff;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.home-main-theme {
+  /*margin: 20px 0;*/
+}
+
+.theme-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.theme-item {
+  display: flex;
+  height: 187.5px;
+  width: 50%;
+  border-bottom: 2px solid #fff;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.theme-item:first-child {
+  border-right: 2px solid #fff;
+}
+
+.theme-item.big {
+  width: 100%;
+}
+
+.theme-item.big .theme-icon view {
+  margin: 0 auto;
+  width: 75px;
+  height: 30px;
+  border-radius: 30px;
+  line-height: 30px;
+  border: 1px solid #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+.theme-item img {
+  height: 100%;
+  width: 100%;
+}
+
+.theme-icon {
+  margin-top: 5px;
+  height: 24px;
+}
+
+.theme-icon img {
+  height: 24px;
+  width: 24px;
+}

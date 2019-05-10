@@ -1,0 +1,24 @@
+@import "../base.css";
+
+.theme-container {}
+
+.theme-header {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.theme-header img {
+  width: 100%;
+  height: 100%;
+}
+
+.theme-header .word view {
+  font-size: 14px;
+}
+
+.theme-header .word view:first-child {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
