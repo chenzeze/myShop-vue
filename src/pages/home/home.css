@@ -1,5 +1,9 @@
 @import "../base.css";
 
+.home {
+  width: 100%;
+}
+
 .food-container {}
 
 .swiper {

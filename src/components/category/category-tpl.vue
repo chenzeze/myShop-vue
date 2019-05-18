@@ -1,5 +1,5 @@
 <template>
-  <div class="category-detail-box" v-show="categoryInfo">
+  <div class="category-detail-box" v-if="categoryInfo">
     <div class="category-header">
       <img :src="categoryInfo.topImgUrl">
     </div>
@@ -7,7 +7,11 @@
       <span>{{categoryInfo.title}}</span>
     </div>
     <div class="category-main">
-        <div v-for="(item,index) in categoryInfo.procucts" :key="item.id" :class="index%3==1?'middle category-goods-items':'category-goods-items'" :data-id="item.id" @click="onProductsItemTap">
+        <div v-for="(item,index) in categoryInfo.procucts"
+        :key="item.id"
+        :class="index%3==1?'middle category-goods-items':'category-goods-items'"
+        :data-id="item.id"
+        @click="onProductsItemTap">
           <img :src="item.main_img_url">
           <div>{{item.name}}</div>
         </div>
@@ -30,6 +34,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url(./category-tpl.css);
 </style>

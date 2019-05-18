@@ -1,24 +1,33 @@
 import {
   Config
 } from './config.js';
+
 import axios from 'axios';
+import VueBus from './vue-bus';
+
+
 class Base {
   constructor() {
     this.baseRestUrl = Config.restUrl;
   }
   request(params, noRefetch) {
+    const CancelToken = axios.CancelToken
     var that = this;
     var url = this.baseRestUrl + params.url;
     if (!params.type) {
       params.type = 'get';
     }
-    axios({
+    return axios({
       url: url,
       data: params.data,
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
       },
-      method: params.type
+      method: params.type,
+      timeout: 30000,
+      cancelToken: new CancelToken(function executor(c) {
+        VueBus.$httpRequestList.push(c)
+      })
     }).then(res => {
       var code = res.status.toString();
       var startChar = code.charAt(0);

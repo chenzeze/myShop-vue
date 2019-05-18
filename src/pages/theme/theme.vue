@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="theme">
   <div class="container theme-container" v-if="loadingHidden">
     <div class="theme-header">
         <img :src="themeInfo.head_img.url"/>
@@ -59,7 +59,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url("./theme.css");
 </style>
 

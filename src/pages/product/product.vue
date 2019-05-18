@@ -4,13 +4,15 @@
     <div class="detail-header-box">
         <div class="fixed-btns-box" @click="onCartTap">
             <div :class="{'fiexd-cart':true, 'animate':isShake}">
-                <img src="../../imgs/icon/cart@top.png">
+                <img src="../../../static/imgs/icon/cart@top.png">
                 <div v-if="cartTotalCounts>0">{{cartTotalCounts}}</div>
             </div>
         </div>
         <div class="detail-topic-img">
             <img :src="product.main_img_url">
         </div>
+        <img :class="isFly?'small-top-img animate':'small-top-img'" id="small-top-img"
+                       :src="product.main_img_url"  :style="translateStyle">
         <div class="cart-box">
             <div class="product-counts">
                 <mt-picker :slots="slots" @change="onValuesChange"></mt-picker>
@@ -18,9 +20,8 @@
             <div class="middle-border"></div>
             <div :class="product.stock==0?'add-cart-btn disabled':'add-cart-btn'" @click="onAddingToCartTap">
                 <span>加入购物车</span>
-                <img class="cart-icon" src="../../imgs/icon/cart.png">
-                <img :class="isFly?'small-top-img animate':'small-top-img'" id="small-top-img"
-                       src="product.main_img_url"  style="translateStyle">
+                <img class="cart-icon" src="../../../static/imgs/icon/cart.png">
+
             </div>
         </div>
         <div class="basic-info-box">
@@ -89,7 +90,8 @@ export default {
       id: null,
       isShake: false,
       isFly: false,
-      product: null
+      product: null,
+      translateStyle: "-webkit-transform: none;"
     };
   },
   methods: {
@@ -148,7 +150,7 @@ export default {
       console.log(events);
       var diff = {
           x: "25px",
-          y: 25 - events.clientY + "px"
+          y: "-340px"
         },
         style =
           "display: div;-webkit-transform:translate(" +
@@ -158,6 +160,7 @@ export default {
           ") rotate(350deg) scale(0)"; //移动距离
       this.isFly = true;
       this.translateStyle = style;
+      console.log(this);
 
       var that = this;
       setTimeout(() => {
@@ -174,13 +177,14 @@ export default {
     },
 
     /*跳转到购物车*/
-    onCartTap: function() {
+    onCartTap: function(e) {
+      console.log(e);
       this.$router.push("/cart");
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
 @import url("./product.css");
 </style>

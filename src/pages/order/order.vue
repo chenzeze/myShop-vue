@@ -26,18 +26,18 @@
         <div>
           <div class="contact">
               <div>
-                <img src="../../imgs/icon/user.png">
+                <img src="../../../static/imgs/icon/user.png">
                 <span class="val">{{addressInfo.name}}</span>
               </div>
               <div class="mobile-box">
-                <img src="../../imgs/icon/mobile.png">
+                <img src="../../../static/imgs/icon/mobile.png">
                 <span  class="val">{{addressInfo.mobile}}</span>
               </div>
           </div>
           <div class="detail">{{addressInfo.totalDetail}}</div>
         </div>
         <div class="contact-icon" v-if="orderStatus==0">
-            <img src="../../imgs/icon/arrow@right.png">
+            <img src="../../../static/imgs/icon/arrow@right.png">
         </div>
       </div>
       <div class="add-new-address" v-else>

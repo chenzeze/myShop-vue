@@ -1,11 +1,12 @@
 <template>
+<div class="cart">
   <div class="container cart-container">
       <div class="cart-box" v-if="cartData.length>0">
               <div v-for="(item,index) in cartData" :key="item.id" :class="index==currentIndex?'cart-item showDeleteBtn':'cart-item hideDeleteBtn'">
                   <div class="cart-item-main" :data-id="item.id" :data-index="index">
                       <div  class="cart-item-checkbox" @click="toggleSelect" :data-id="item.id" :data-status="item.selectStatus">
-                          <img v-if="item.selectStatus" src="../../imgs/icon/circle@selected.png">
-                          <img v-else src="../../imgs/icon/circle@noselected.png">
+                          <img v-if="item.selectStatus" src="../../../static/imgs/icon/circle@selected.png">
+                          <img v-else src="../../../static/imgs/icon/circle@noselected.png">
                       </div>
                       <div class="cart-item-img" @click="onProductsItemTap" :data-id="item.id">
                           <img class="good-img" :src="item.main_img_url"/>
@@ -33,16 +34,16 @@
       <div class="footer-account-box all-accounts-box">
           <div class="all-select" @click="toggleSelectAll" :data-status="selectedTypeCounts==cartData.length?'true':'false'">
               <img v-if="selectedTypeCounts==cartData.length"
-                    class="title-icon" src="../../imgs/icon/all@selected.png">
-              <img v-else class="title-icon" src="../../imgs/icon/all.png">
+                    class="title-icon" src="../../../static/imgs/icon/all@selected.png">
+              <img v-else class="title-icon" src="../../../static/imgs/icon/all.png">
               <span>全选({{selectedCounts}})</span>
           </div>
           <div :class="account==0?'disabled all-price-submit':'all-price-submit'" @click="submitOrder">
               <div class="accounts-btn">下单</div>
               <div class="price-text">￥{{account}}</div>
               <div class="arrow-icon">
-                  <img v-if="account==0" src="../../imgs/icon/arrow@grey.png">
-                  <img v-else src="../../imgs/icon/arrow.png">
+                  <img v-if="account==0" src="../../../static/imgs/icon/arrow@grey.png">
+                  <img v-else src="../../../static/imgs/icon/arrow.png">
               </div>
           </div>
       </div>
@@ -50,6 +51,7 @@
           加载中...
       </div>
   </div>
+</div>
 </template>
 
 <script>

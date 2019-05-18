@@ -1,8 +1,8 @@
 <template>
-<div>
+<div class="home">
   <div class='container home-container' v-if='loadingHidden'>
     <mt-swipe class='swiper'>
-        <mt-swipe-item class="banner-item" v-for="item in bannerArr" :key="item.key_word" @click="onProductsItemTap" :data-id="item.key_word">
+        <mt-swipe-item class="banner-item" v-for="item in bannerArr" :key="item.key_word" :data-id="item.key_word">
           <img class='item-image' :src="item.img.url">
         </mt-swipe-item>
     </mt-swipe>
@@ -29,18 +29,23 @@
 </template>
 
 <script>
+import myHeader from "@/components/header/header";
+import myFooter from "@/components/footer/footer";
 import productList from "@/components/products/products-tpl";
 import { Home } from "@/models/home-model";
 var home = new Home();
 export default {
   components: {
-    productList
+    productList,
+    myHeader,
+    myFooter
   },
   created() {
     this._loadData();
   },
   data() {
     return {
+      navigationBarTitleText: "首页",
       loadingHidden: false,
       bannerArr: [],
       themeArr: [],
@@ -61,10 +66,11 @@ export default {
         callback && callback();
       });
     },
-    onProductsItemTap: function(event) {
-      var id = home.getDataSet(event, "id");
-      this.$router.push("/product?id=" + id);
-    },
+    // onProductsItemTap: function(event) {
+    //   console.log(1);
+    //   var id = home.getDataSet(event, "id");
+    //   this.$router.push("/product?id=" + id);
+    // },
     onThemesItemTap: function(event) {
       var id = home.getDataSet(event, "id");
       var name = home.getDataSet(event, "name");
