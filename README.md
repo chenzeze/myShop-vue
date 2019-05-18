@@ -40,6 +40,13 @@ npm run dev
 
 # 效果演示
 
+<img src="./outputImg/vueOutput.gif">
+<img src="./outputImg/home.png">
+<img src="./outputImg/theme.png">
+<img src="./outputImg/product.png">
+<img src="./outputImg/cart.png">
+<img src="./outputImg/category.png">
+
 # 目标功能
 
 - [x] 优化性能：页面跳转前取消上一页所有请求 cancelToken -- 完成
