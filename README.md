@@ -40,12 +40,16 @@ npm run dev
 
 # 效果演示
 
-<img src="./outputImg/vueOutput.gif">
-<img src="./outputImg/home.png">
-<img src="./outputImg/theme.png">
-<img src="./outputImg/product.png">
-<img src="./outputImg/cart.png">
-<img src="./outputImg/category.png">
+<figure class="third">
+  <img src="./outputImg/vueOutput.gif">
+  <img src="./outputImg/home.png">
+  <img src="./outputImg/theme.png">
+</figure>
+<figure class="third">
+  <img src="./outputImg/product.png">
+  <img src="./outputImg/cart.png">
+  <img src="./outputImg/category.png">
+</figure>
 
 # 目标功能
 
