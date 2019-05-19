@@ -40,16 +40,18 @@ npm run dev
 
 # 效果演示
 
-<figure class="third">
-  <img src="./outputImg/vueOutput.gif">
-  <img src="./outputImg/home.png">
-  <img src="./outputImg/theme.png">
-</figure>
-<figure class="third">
-  <img src="./outputImg/product.png">
-  <img src="./outputImg/cart.png">
-  <img src="./outputImg/category.png">
-</figure>
+### 总体效果与首页
+
+<img src="./outputImg/vueOutput.gif" width="365" height="619"/><img src="./outputImg/home.png" width="365" height="619"/>
+
+### 主题与商品详情
+
+<img src="./outputImg/theme.png" width="365" height="619"/><img src="./outputImg/product.png" width="365" height="619"/>
+
+### 购物车与分类
+
+  <img src="./outputImg/cart.png" width="365" height="619"/>
+<img src="./outputImg/category.png" width="365" height="619"/>
 
 # 目标功能
 
