@@ -46,27 +46,27 @@ npm run dev
 
 ### 首页
 
-<img src="../outputImg/home.png" width="365" height="619"/><img src="../outputImg/home.gif" width="365" height="619"/>
+<img src="./outputImg/home.png" width="365" height="619"/><img src="./outputImg/home.gif" width="365" height="619"/>
 
 ### 主题
 
-<img src="../outputImg/theme.png" width="365" height="619"/><img src="../outputImg/theme.gif" width="365" height="619"/>
+<img src="./outputImg/theme.png" width="365" height="619"/><img src="./outputImg/theme.gif" width="365" height="619"/>
 
 ### 商品详情
 
-<img src="../outputImg/product.png" width="365" height="619"/><img src="../outputImg/product.gif" width="365" height="619"/>
+<img src="./outputImg/product.png" width="365" height="619"/><img src="./outputImg/product.gif" width="365" height="619"/>
 
 ### 购物车
 
-<img src="../outputImg/cart.png" width="365" height="619"/><img src="../outputImg/cart.gif" width="365" height="619"/>
+<img src="./outputImg/cart.png" width="365" height="619"/><img src="./outputImg/cart.gif" width="365" height="619"/>
 
 ### 订单详情
 
-<img src="../outputImg/order.png" width="365" height="619"/>
+<img src="./outputImg/order.png" width="365" height="619"/>
 
 ### 我的
 
-<img src="../outputImg/my.png" width="365" height="619"/><img src="../outputImg/my.gif" width="365" height="619"/>
+<img src="./outputImg/my.png" width="365" height="619"/><img src="./outputImg/my.gif" width="365" height="619"/>
 
 # 目标功能
 
