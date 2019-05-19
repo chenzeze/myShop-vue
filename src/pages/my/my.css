@@ -5,15 +5,17 @@
 }
 
 .my-header {
+  width: 100%;
   background-color: #AB956D;
   color: #fff;
   display: flex;
   align-items: center;
   padding: 15px;
   font-size: 14px;
+  text-indent: 10px;
 }
 
-.my-header image {
+.my-header img {
   height: 50px;
   width: 50px;
   border-radius: 50px;
@@ -24,6 +26,7 @@
 }
 
 .my-address {
+  width: 100%;
   background-color: #fff;
 }
 
@@ -31,6 +34,18 @@
   border-bottom: 0.5px solid #E9E9E9;
   margin-left: 15px;
   height: 45px;
+  line-height: 45px;
+  padding: 10px 15px 10px 0;
+  font-size: 14px;
+  color: #7C7C7C;
+  text-align: left;
+  /* 不换行 */
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow: ellipsis;
+  /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
 }
 
 .section:last-child {
@@ -73,12 +88,13 @@
   justify-content: center;
 }
 
-.section .arrow-icon image {
+.section .arrow-icon img {
   height: 16px;
   width: 16px;
 }
 
 .my-order {
+  width: 100%;
   margin-top: 10px;
   /*border-bottom: 0.5px solid #EDEDED;*/
 }
@@ -93,7 +109,7 @@
   position: relative;
 }
 
-.item-title image {
+.item-title img {
   position: absolute;
   transform: rotate(270deg);
   height: 24px;
@@ -136,7 +152,7 @@
   border-radius: 2px;
 }
 
-.order-main .item-left image {
+.order-main .item-left img {
   height: 100%;
   width: 100%;
 }

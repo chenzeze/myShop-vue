@@ -1,6 +1,6 @@
 import {
   Base
-} from './base.js';
+} from '@/utils/base.js';
 
 
 class Address extends Base {

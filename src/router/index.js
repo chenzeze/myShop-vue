@@ -23,6 +23,24 @@ export default new Router({
       }
     },
     {
+      path: '/category',
+      name: 'category',
+      component: (resolve) => require(['@/pages/category/category'], resolve),
+      meta: {
+        title: '分类',
+        index: 1
+      }
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: (resolve) => require(['@/pages/cart/cart'], resolve),
+      meta: {
+        title: '购物车详情',
+        index: 2
+      }
+    },
+    {
       path: '/product',
       name: 'product',
       component: (resolve) => require(['@/pages/product/product'], resolve),
@@ -41,24 +59,6 @@ export default new Router({
       }
     },
     {
-      path: '/cart',
-      name: 'cart',
-      component: (resolve) => require(['@/pages/cart/cart'], resolve),
-      meta: {
-        title: '购物车详情',
-        index: 2
-      }
-    },
-    {
-      path: '/category',
-      name: 'category',
-      component: (resolve) => require(['@/pages/category/category'], resolve),
-      meta: {
-        title: '分类',
-        index: 1
-      }
-    },
-    {
       path: '/my',
       name: 'my',
       component: (resolve) => require(['@/pages/my/my'], resolve),
@@ -66,6 +66,15 @@ export default new Router({
         title: '我的',
         index: 4
       }
-    }
+    },
+    {
+      path: '/address',
+      name: 'address',
+      component: (resolve) => require(['@/pages/address/address'], resolve),
+      meta: {
+        title: '地址',
+        index: 5
+      }
+    },
   ]
 })

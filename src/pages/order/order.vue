@@ -25,7 +25,7 @@
       <div class="contact-box" v-if="addressInfo">
         <div>
           <div class="contact">
-              <div>
+              <div class="name-box">
                 <img src="../../../static/imgs/icon/user.png">
                 <span class="val">{{addressInfo.name}}</span>
               </div>
@@ -49,7 +49,7 @@
   <div class="order-main">
       <div class="product-item" v-for="item in productsArr" :key="item.id">
         <div class="item-left">
-          <img src="item.main_img_url">
+          <img :src="item.main_img_url">
         </div>
         <div class="item-middle">
           <div>{{item.name}}</div>
@@ -75,7 +75,7 @@
 <script>
 import { Order } from "@/models/order-model.js";
 import { Cart } from "@/models/cart-model.js";
-import { Address } from "@/utils/address.js";
+import { Address } from "@/models/address-model.js";
 
 var order = new Order();
 var cart = new Cart();
@@ -139,9 +139,7 @@ export default {
 
     /*绑定地址信息*/
     _bindAddressInfo: function(addressInfo) {
-      this.setData({
-        addressInfo: addressInfo
-      });
+      this.addressInfo = addressInfo;
     },
 
     /*下单和付款*/
@@ -292,4 +290,5 @@ export default {
 </script>
 
 <style>
+@import url("./order.css");
 </style>

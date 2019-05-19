@@ -20,7 +20,7 @@ class My extends Base {
     // 如果验证失败，就将返回默认的用户记录返回给前端
     var userInfo = {
       avatarUrl: '../../../static/imgs/icon/user@default.png',
-      nickName: '零食小贩'
+      nickName: 'Dynamite'
     };
     typeof cb == "function" && cb(userInfo);
   }

@@ -20,13 +20,16 @@
           </div>
           <div class="item-main">
             <div class="section">
-              <input disabled name="name" placeholder="姓名" value="addressInfo.name" />
+              <!-- <input disabled name="name" placeholder="姓名" :value="addressInfo.name" /> -->
+              {{addressInfo.name}}
             </div>
             <div class="section">
-              <input disabled type="number" name="mobile" placeholder="手机号码" value="addressInfo.mobile" />
+              <!-- <input disabled type="number" name="mobile" placeholder="手机号码" :value="addressInfo.mobile" /> -->
+              {{addressInfo.mobile}}
             </div>
             <div class="section">
-              <input disabled name="detail" placeholder="收货地址" value="addressInfo.totalDetail" />
+              <!-- <input disabled name="detail" placeholder="收货地址" :value="addressInfo.totalDetail" /> -->
+              {{addressInfo.totalDetail}}
             </div>
           </div>
         </div>
@@ -45,7 +48,7 @@
               </div>
               <div class="order-main" @click="showOrderDetailInfo" data-id="item.id">
                 <div class="item-left">
-                  <img src="item.snap_img">
+                  <img :src="item.snap_img">
                 </div>
                 <div class="item-middle">
                   <div>{{item.snap_name}}</div>
@@ -120,24 +123,24 @@ export default {
 
     /*修改或者添加地址信息*/
     editAddress: function() {
-      var that = this;
+      this.$router.push("/address");
     },
 
     /*绑定地址信息*/
     _bindAddressInfo: function(addressInfo) {
-      this.setData({
-        addressInfo: addressInfo
-      });
+      this.addressInfo = addressInfo;
     },
 
     /*订单信息*/
     _getOrders: function(callback) {
       var that = this;
       order.getOrders(this.pageIndex, res => {
+        console.log(res);
         var data = res.data;
         this.loadingHidden = true;
         if (data.length > 0) {
           this.orderArr.push.apply(this.orderArr, res.data); //数组合并
+          console.log(this.orderArr);
         } else {
           this.isLoadedAll = true; //已经全部加载完毕
           this.pageIndex = 1;

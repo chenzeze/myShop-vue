@@ -1,0 +1,25 @@
+.section {
+  border-bottom: 0.5px solid #E9E9E9;
+  margin-left: 15px;
+  height: 45px;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section input {
+  font-size: 14px;
+  color: #7C7C7C;
+  padding: 10px 15px 10px 0;
+}
+
+.item-title {
+  padding: 12.5px 0;
+  color: #999999;
+  text-align: center;
+  border-bottom: 0.5px solid #EDEDED;
+  font-size: 14px;
+  background-color: #fff;
+  position: relative;
+}

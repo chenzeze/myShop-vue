@@ -75,6 +75,35 @@ class Order extends Base {
       type: 'get',
       sCallback: function (data) {
         callback && callback(data); //1 未支付  2，已支付  3，已发货，4已支付，但库存不足
+      },
+      eCallback: function () {
+        var data = {
+          "current_page": 1,
+          "data": [{
+              "id": 547,
+              "order_no": "C519346424665046",
+              "create_time": "2019-05-19 10:57:22",
+              "total_price": "0.03",
+              "status": 1,
+              "snap_img": "https://chenzeze.xyz/images/product-dryfruit@1.png",
+              "snap_name": "梨花带雨 3个",
+              "total_count": 3,
+              "prepay_id": null
+            },
+            {
+              "id": 546,
+              "order_no": "C519342334635115",
+              "create_time": "2019-05-19 10:50:33",
+              "total_price": "0.02",
+              "status": 1,
+              "snap_img": "https://chenzeze.xyz/images/product-vg@1.png",
+              "snap_name": "芹菜 半斤",
+              "total_count": 2,
+              "prepay_id": null
+            }
+          ]
+        };
+        callback && callback(data); //1 未支付  2，已支付  3，已发货，4已支付，但库存不足
       }
     };
     this.request(allParams);

@@ -29,6 +29,7 @@ class Base {
         VueBus.$httpRequestList.push(c)
       })
     }).then(res => {
+      console.log(res)
       var code = res.status.toString();
       var startChar = code.charAt(0);
 
@@ -40,6 +41,8 @@ class Base {
       }
     }).catch(err => {
       that._processError(err);
+      /* 没有登陆权限时获取默认用户地址 */
+      params.eCallback && params.eCallback(err);
     })
 
   }
